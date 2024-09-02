@@ -23,35 +23,35 @@ export default function Home() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         <LinkSection title="Company" links={[
-          "History",
-          "The Team",
-          "About our values",
-          "Logos & Assets",
-          "Company roadmap",
-          "FAQ's"
+          { text: "History", url: "/history" },
+          { text: "The Team", url: "/team" },
+          { text: "About our values", url: "/values" },
+          { text: "Logos & Assets", url: "/assets" },
+          { text: "Company roadmap", url: "/roadmap" },
+          { text: "FAQ's", url: "/faqs" }
         ]} />
         <LinkSection title="{How we work}" links={[
-          "Distributed native",
-          "How we communicate",
-          "Hack in public"
+          { text: "Distributed native", url: "/distributed-native" },
+          { text: "How we communicate", url: "/communication" },
+          { text: "Hack in public", url: "/hack-in-public" }
         ]} />
         <LinkSection title="</Employment>" links={[
-          "Benefits & Compensation",
-          "Company equipment",
-          "Travel Policy",
-          "Reimbursements"
+          { text: "Benefits & Compensation", url: "/benefits" },
+          { text: "Company equipment", url: "/equipment" },
+          { text: "Travel Policy", url: "/travel-policy" },
+          { text: "Reimbursements", url: "/reimbursements" }
         ]} />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
         <LinkSection title="Join the party" links={[
-          "Careers page",
-          "Recruitment process",
-          "Join us on Discord"
+          { text: "Careers page", url: "/careers" },
+          { text: "Recruitment process", url: "/recruitment" },
+          { text: "Join us on Discord", url: "https://discord.gg/your-invite-link", isExternal: true }
         ]} />
         <LinkSection title="<FindUs>" links={[
-          "learn.startup.security",
-          "startupventures.io"
+          { text: "learn.startup.security", url: "https://learn.startup.security", isExternal: true },
+          { text: "startupventures.io", url: "https://startupventures.io", isExternal: true }
         ]} />
       </div>
     </>
