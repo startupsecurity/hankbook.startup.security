@@ -1,0 +1,18 @@
+Project Guidelines:
+
+* NextJs 14+
+* TailwindCSS
+* Typescript
+* Prisma
+* Shadcn/UI
+* Zod
+* Tanstack Query
+* Jest
+* Vitest
+* Eslint
+* Prettier
+* Husky
+* Lint-staged
+* Commitlint
+* Standard Version
+* TailwindCSS

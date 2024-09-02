@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,17 +23,168 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background-color: black;
+  color: #ef4444;
+  /* Red color */
+  font-family: 'VT323', monospace;
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-image:
+    linear-gradient(to right, rgba(255, 0, 0, .1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 0, 0, .1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: top left;
+  image-rendering: pixelated;
+}
+
+* {
+  image-rendering: pixelated;
+}
+
+.measurement-line::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid #ef4444;
+  border-top: 1px solid #ef4444;
+}
+
+.measurement-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #ef4444;
+  border-bottom: 1px solid #ef4444;
+}
+
+.pixel-corners {
+  clip-path:
+    polygon(0 4px, 4px 4px, 4px 0,
+      calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
+      100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
+      4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(-5px, 5px);
+  }
+
+  20% {
+    clip-path: inset(15% 0 65% 0);
+    transform: translate(5px, -5px);
+  }
+
+  40% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(-5px, 5px);
+  }
+
+  60% {
+    clip-path: inset(40% 0 43% 0);
+    transform: translate(5px, -5px);
+  }
+
+  80% {
+    clip-path: inset(5% 0 75% 0);
+    transform: translate(-5px, 5px);
+  }
+
+  100% {
+    clip-path: inset(60% 0 15% 0);
+    transform: translate(5px, -5px);
+  }
+}
+
+.scanline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(255, 0, 0, 0.2), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00ff;
+  animation: glitch 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: 2px 0 #00ffff;
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+#grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(to right, rgba(239, 68, 68, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(239, 68, 68, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: -1;
 }
