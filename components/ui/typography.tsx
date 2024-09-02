@@ -18,12 +18,15 @@ const typographyVariants = cva("", {
 export interface TypographyProps
     extends React.HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof typographyVariants> {
-    as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div"
+    as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div" | "li"
 }
 
-export const Typography = forwardRef<HTMLHeadingElement, TypographyProps>(
-    ({ className, variant, as = "div", ...props }, ref) => {
-        const Comp = as
+export const Typography = forwardRef(
+    <T extends React.ElementType = 'div'>(
+        { className, variant, as, ...props }: TypographyProps & { as?: T },
+        ref: React.Ref<React.ElementRef<T>>
+    ) => {
+        const Comp = (as || 'div') as React.ElementType
         return (
             <Comp
                 className={cn(typographyVariants({ variant, className }))}
@@ -32,5 +35,8 @@ export const Typography = forwardRef<HTMLHeadingElement, TypographyProps>(
             />
         )
     }
-)
+) as React.ForwardRefExoticComponent<TypographyProps & React.RefAttributes<HTMLElement>> & {
+    displayName?: string
+}
+
 Typography.displayName = "Typography"

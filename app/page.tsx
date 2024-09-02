@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Github, Twitter, MessageCircle } from "lucide-react";
 import { Typography } from "@/components/ui/typography";
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [glitchText, setGlitchText] = useState('');
@@ -144,10 +145,10 @@ function LinkSection({ title, links }: { title: string; links: string[] }) {
       <ul className="list-none">
         {links.map((link, index) => (
           <Typography key={index} variant="body" as="li" className="mb-2 text-lg">
-            <a href="#" className="text-red-300 hover:text-red-100 relative pl-4 group">
+            <Link href={`/${link.toLowerCase().replace(/\s+/g, '-')}`} className="text-red-300 hover:text-red-100 relative pl-4 group">
               <span className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-px bg-red-500 group-hover:w-3 transition-all"></span>
               {link}
-            </a>
+            </Link>
           </Typography>
         ))}
       </ul>
