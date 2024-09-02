@@ -17,7 +17,7 @@ export default function History() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="min-h-screen bg-black text-red-500 p-8"
+            className="  text-red-500 p-8"
         >
             <div className="max-w-3xl mx-auto">
                 <Typography variant="h1" className="mb-8 text-4xl border-b border-red-500 pb-2">
