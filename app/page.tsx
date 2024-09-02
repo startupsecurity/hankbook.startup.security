@@ -5,9 +5,13 @@ export default function Home() {
   return (
     <>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Section title="Mission" content="Secure the tools, technologies, and companies that are building the future we want" />
-        <Section title="Vision" content="Equip the next generation of security leaders with the knowledge and skills to secure their companies and the world" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Section
+          title="Mission & Vision"
+          content={[
+            "Mission: Secure the tools, technologies, and companies that are building the future we want",
+          ]}
+        />
         <Section title="Values" content={[
           "1. We are a business",
           "2. Stronger together",
@@ -21,14 +25,15 @@ export default function Home() {
         <LinkSection title="Company" links={[
           "History",
           "The Team",
-          "Company messaging",
+          "About our values",
           "Logos & Assets",
+          "Company roadmap",
           "FAQ's"
         ]} />
         <LinkSection title="{How we work}" links={[
-          "Remote native",
-          "Notion",
-          "Slack",
+          "Distributed native",
+          "How we communicate",
+          "Hack in public"
         ]} />
         <LinkSection title="</Employment>" links={[
           "Benefits & Compensation",
