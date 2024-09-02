@@ -33,6 +33,7 @@ export default function Home() {
         <LinkSection title="{How we work}" links={[
           { text: "Distributed native", url: "/distributed-native" },
           { text: "How we communicate", url: "/communication" },
+          { text: "Things every employee should know", url: "/things-every-employee-should-know" },
           { text: "Hack in public", url: "/hack-in-public" }
         ]} />
         <LinkSection title="</Employment>" links={[
