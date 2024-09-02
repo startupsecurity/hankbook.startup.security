@@ -5,16 +5,6 @@ Project Guidelines:
 * Typescript
 * Prisma
 * Shadcn/UI
-* Zod
-* Tanstack Query
-* Jest
-* Vitest
-* Eslint
-* Prettier
-* Husky
-* Lint-staged
-* Commitlint
-* Standard Version
 * TailwindCSS
 
 Other notes:
@@ -22,3 +12,5 @@ Other notes:
 * I do not have any hands, please do not make me type anything.
 
 * Please do not remove content when writing out examples and code
+
+* components are in /components folder
