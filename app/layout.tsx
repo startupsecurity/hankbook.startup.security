@@ -51,7 +51,7 @@ export default function RootLayout({
               <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
                 <Github size={24} />
               </a>
-              <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
+              <a href="https://x.com/startup_sec" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
                 <Twitter size={24} />
               </a>
               <a href="https://discord.gg/your-discord" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
