@@ -48,13 +48,13 @@ export default function RootLayout({
             </div>
 
             <footer className="mt-16 flex justify-center items-center space-x-4 border-t border-red-500 pt-4">
-              <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
+              <a href="https://github.com/startupsecurity" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
                 <Github size={24} />
               </a>
               <a href="https://x.com/startup_sec" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
                 <Twitter size={24} />
               </a>
-              <a href="https://x.com/startup_sec" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
+              <a href="https://discord.gg/Tt3fArWB5E" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-300 ">
                 <MessageCircle size={24} />
               </a>
             </footer>
