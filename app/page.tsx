@@ -34,7 +34,8 @@ export default function Home() {
           { text: "Distributed native", url: "/distributed-native" },
           { text: "How we communicate", url: "/communication" },
           { text: "Things every employee should know", url: "/things-every-employee-should-know" },
-          { text: "Hack in public", url: "/hack-in-public" }
+          { text: "Hack in public", url: "/hack-in-public" },
+          { text: "Reading list", url: "/reading-list" }
         ]} />
         <LinkSection title="</Employment>" links={[
           { text: "Benefits & Compensation", url: "/benefits" },
