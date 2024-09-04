@@ -24,18 +24,18 @@ export default function Team() {
                 <Section
                     title="Leadership"
                     content={[
-                        "CEO: [Name]",
-                        "CTO: [Name]",
-                        "COO: [Name]",
+                        "Ryan LaBouve: Jackhammer of all trades",
+                        "John Mosesman: Doer of Dev",
+                        "Rob de Cespedes: Shaolin Security Monk",
                     ]}
                 />
                 <Section
                     title="Departments"
                     content={[
-                        "Engineering",
-                        "Product",
-                        "Sales",
-                        "Marketing",
+                        "Cyber Security",
+                        "Security Products",
+                        "Learn Platform and integrations",
+                        "Security Marketing and Sales",
                     ]}
                 />
             </motion.div>
