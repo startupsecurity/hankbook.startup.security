@@ -16,9 +16,9 @@ export default function BitcoinBasics() {
                 Bitcoin Basics
             </Typography>
             <Typography variant="body" className="mb-4">
-                <br>Bitcoin is kind of a strange thing for people to grasp, mostly because you can’t physically grasp it, but it can still be used to purchase goods and services.</br>
-                <br>Bitcoin is called a cryptocurrency but for the purposes of how it exists and is used in the world, I’d say it’s probably easier to view it as a commodity or a stock. It’s a thing you invest in that fluctuates in value based on it’s valuation across the planet. Because it’s not bound to any country or precious metal, it’s value is based purely on what people are willing to pay for it.</br>
-                <br>This is the short answer so please look to other places on the site if you want a better, more technical answer but the best way I can come up with to think of Bitcoin is having a debit card where the contents are tied to a pretty volatile stock. You can spend those contents whenever you like but the value of what’s inside will be in flux all the time.</br>
+                Bitcoin is kind of a strange thing for people to grasp, mostly because you can’t physically grasp it, but it can still be used to purchase goods and services.<br>
+                Bitcoin is called a cryptocurrency but for the purposes of how it exists and is used in the world, I’d say it’s probably easier to view it as a commodity or a stock. It’s a thing you invest in that fluctuates in value based on it’s valuation across the planet. Because it’s not bound to any country or precious metal, it’s value is based purely on what people are willing to pay for it.<br>
+                This is the short answer so please look to other places on the site if you want a better, more technical answer but the best way I can come up with to think of Bitcoin is having a debit card where the contents are tied to a pretty volatile stock. You can spend those contents whenever you like but the value of what’s inside will be in flux all the time.<br>
             </Typography>
             <Link href="/things-every-employee-should-know" className="text-red-300 hover:text-red-100">
                 &lt; Back to Things Every Employee Should Know
