@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import Link from "next/link";
 
-export default function GitBasics() {
+export default function EthereumOverview() {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
