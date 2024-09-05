@@ -49,7 +49,7 @@ export default function Home() {
         <LinkSection title="Join the party" links={[
           { text: "Careers page", url: "/careers" },
           { text: "Recruitment process", url: "/recruitment" },
-          { text: "Join us on Discord", url: "https://discord.gg/6BtTGGwT", isExternal: true }
+          { text: "Join us on Discord", url: "https://discord.gg/79JPHnDjC6", isExternal: true }
         ]} />
         <LinkSection title="<FindUs>" links={[
           { text: "learn.startup.security", url: "https://learn.startup.security", isExternal: true },
